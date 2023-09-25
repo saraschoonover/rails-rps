@@ -1,7 +1,9 @@
 class RockController < ApplicationController
   def play
     @random_move = ["rock", "paper", "scissors"].sample
-
-    render({ :template => "game_templates/play_paper"})
+    @win = "We won!"
+    @lose = "We lost!"
+    @tie = "We tied!"
+    render({ :template => "game_templates/play_rock"})
   end
 end
